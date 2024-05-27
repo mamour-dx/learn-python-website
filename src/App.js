@@ -6,13 +6,13 @@ import Home from './pages/Home/Home.js';
 import Quiz from './pages/Quiz/Quiz.js';
 import Community from './pages/Community/Community.js';
 import SupportMe from './pages/SupportMe/SupportMe.js';
+import './App.css';
 
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
 
   const renderPage = () => {
-    console.log('Current Page:', currentPage);
     switch (currentPage) {
       case 'Home':
         return <Home />;
@@ -28,10 +28,12 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
       <Header setCurrentPage={setCurrentPage} />
       {renderPage()}
+    <footer className="footer">
       <Footer />
+    </footer>
     </div>
   );
 };

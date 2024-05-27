@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../../assets/logo.png';
 import python from '../../assets/python.png';
@@ -9,10 +9,13 @@ import supportIcon from '../../assets/icons/supportMe.png';
 
 const Header = ({ setCurrentPage }) => {
     const [isOpen, setIsOpen] = useState(false);  // State to handle menu toggle
-
+    
     return (
         <header className="header">
+            <div className='logo-container'>
             <a href='https://mxr.codes' target='_blank'><img src={logo} alt="Logo" className="logo" /></a>
+            
+            </div>
             <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>  
                 <div className="bar"></div>
                 <div className="bar"></div>

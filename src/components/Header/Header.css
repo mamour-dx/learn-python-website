@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #1f1f1f;
+    background: linear-gradient(to bottom, rgb(30, 90, 122), rgb(46, 46, 46));
     color: #ffffff;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -11,6 +11,9 @@
 .logo, .python {
     width: 100px;
     height: auto;
+}
+.logo {
+    margin-top: 15px;
 }
 
 .nav-list {
@@ -30,8 +33,9 @@
     margin: 0 20px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    padding-left: 16px;
+    padding-right: 16px;
 }
-
 .icon {
     width: 24px;
     height: auto;
@@ -73,6 +77,7 @@
         width: 80px; /* Slightly smaller logo for more space */
         padding-right: 20px; /* Padding to not stick to the edges */
         order: 1; /* Keeps logo on the left */
+        
     }
 
     .python {
@@ -95,7 +100,7 @@
         border-radius: 6px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for better visibility */
         z-index: 1000; /* Ensures it's above other content */
-        padding: 10px 0; /* Padding inside the dropdown */
+        padding: 10px 0; 
     }
 
     .nav-list.active {
@@ -122,8 +127,11 @@
 }
 
 
-
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+.python {
+    animation: spin 10s linear infinite; 
 }

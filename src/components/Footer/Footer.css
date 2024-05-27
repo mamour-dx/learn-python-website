@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, rgb(30, 90, 122), rgb(46, 46, 46));
+    color: #fff;
+    flex-direction: row-reverse;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    left: 13px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 50px;  /* Gap between the social media icons */
+    filter: brightness(1) invert(1); /* Makes icons white */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    /*Make icon pop up slowly on hover*/
+    transform: translateY(-3px);
+    filter: brightness(0.5);  /* Grey hover effect */
+    transform: scale(1.1);  /* Slight scale on hover */
+}
+
+.social-icon:first-child {
+    margin-left: 0;  /* No margin to the left of the first icon */
+}
+
+.copyright {
+    /*Get the text to the left */
+    margin-right: 70px;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column-reverse;  /* Stacks copyright text above icons on mobile */
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 10px;  /* Space above icons when stacked */
+    }
+
+    .copyrigth {
+        text-align: center;
+    }
+}
