@@ -9,7 +9,7 @@ import SupportMe from './pages/SupportMe/SupportMe.js';
 
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('Home');
 
   const renderPage = () => {
     console.log('Current Page:', currentPage);
@@ -28,16 +28,13 @@ const App = () => {
   };
 
   return (
-    <div id="root">
+    <div>
       <Header setCurrentPage={setCurrentPage} />
-      <div className="main-content">
-        {renderPage()}
-      </div>
+      {renderPage()}
       <Footer />
     </div>
   );
 };
-
 
 export default App;
 

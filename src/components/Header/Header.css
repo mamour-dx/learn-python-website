@@ -1,28 +1,129 @@
-/* src/components/Header.css */
 .header {
-    background: #333;
-    color: #fff;
-    padding: 1em;
-  }
-  
-  .nav-list {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo, .python {
+    width: 100px;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
     list-style: none;
-    justify-content: space-around;
     margin: 0;
     padding: 0;
-  }
-  
-  .nav-item {
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
     cursor: pointer;
-    padding: 0.5em 1em;
-    transition: background 0.3s, color 0.3s;
-    border-radius: 30px;
-  }
-  
-  .nav-item:hover {
-    background: #555;
-    color: #ffeb3b;
-    transform: scale(1.1);
-  }
-  
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon {
+    width: 24px;
+    height: auto;
+    margin-bottom: 4px;
+    filter: brightness(0) invert(1);  /* Change icon color to white*/
+}
+.icon:hover {
+    /* Make icon bigger on hover  */
+    transform: scale(1.2);
+    
+}
+
+.nav-item:hover {
+    transform: translateY(-3px);
+    color: #ffe052;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between; /* Ensures logo and hamburger are on opposite ends */
+        align-items: center; /* Keeps items vertically aligned */
+    }
+
+    .logo {
+        width: 80px; /* Slightly smaller logo for more space */
+        padding-right: 20px; /* Padding to not stick to the edges */
+        order: 1; /* Keeps logo on the left */
+    }
+
+    .python {
+        display: none; /* Hide Python logo */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon */
+        cursor: pointer;
+        order: 2; /* Place menu icon on the right */
+    }
+
+    .nav-list {
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 50px; /* Below the header */
+        right: 20px; /* Right aligned */
+        width: 250px; /* Width of the dropdown menu */
+        background-color: #333; /* Background of the dropdown */
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for better visibility */
+        z-index: 1000; /* Ensures it's above other content */
+        padding: 10px 0; /* Padding inside the dropdown */
+    }
+
+    .nav-list.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items to start for better readability */
+    }
+
+    .nav-item {
+        width: 40%; /* Full width to match the dropdown */
+        padding: 12px 20px; /* Padding for better touch targets */
+        text-align: center; /* Align text to the left for consistency */
+        border-bottom: 1px solid #555; /* Separates items visually */
+        transition: background-color 0.3s; /* Smooth transition for hover */
+    }
+
+    .nav-item:last-child {
+        border-bottom: none; /* Removes border from the last item */
+    }
+
+    .nav-item:hover {
+        background-color: #555; /* Hover effect */
+    }
+}
+
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
