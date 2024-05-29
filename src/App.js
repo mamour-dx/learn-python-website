@@ -11,7 +11,6 @@ import './App.css';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
-
   const renderPage = () => {
     switch (currentPage) {
       case 'Home':
