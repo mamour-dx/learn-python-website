@@ -1,12 +1,17 @@
 /* src/pages/Home.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background: url('../../assets/background.png');
   background-size: cover;
   color: #ffffff;
+  background-color: rgb(219, 240, 249);
   margin: 0;
   padding: 0;
+}
+
+.python-text {
+  color:#ffd700;  
 }
 
 .home {
@@ -14,16 +19,23 @@ body {
   text-align: center;
 }
 
+
 .welcome-section {
   background: linear-gradient(to border-bottom, #1f4e79, #2c3e50);
   color: white;
-  padding: 3em 0;
+  padding-top: 4px;
+  padding-bottom: 2em;
   border-radius: 15px; 
   margin-bottom: 2em;
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px);
-  box-shadow: 0 16px 16px rgba(0,0,0,0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+  border: 6px solid rgba(255, 255, 255, 0.2);
+
+}
+img {
+  width: 210px;
+  height: 130px;
 }
 
 .welcome-section h1 {
@@ -56,20 +68,14 @@ body {
 }
 
 .section {
-  background: #1f4e79; /* Dark blue background */
   color: white;
   padding: 2em 0;
   margin-bottom: 2em;
-  border-radius: 15px; /* Rounded corners */
-}
-
-.section h2 {
-  color: #ffeb3b; /* Yellow for headings */
-  margin-bottom: 1em;
-}
-
-.section p, .section iframe {
-  margin-bottom: 1em;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 16px 16px 16px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);/* Rounded corners */
+  background: none!important;
 }
 
 .section iframe {
@@ -83,3 +89,21 @@ body {
     padding: 1em;
   }
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(219, 240, 249);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(78, 116, 154); 
+  border-radius: 20px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(46, 69, 92); 
+}
+
