@@ -25,7 +25,7 @@ const App = () => {
         return <Home />;
     }
   };
-
+  console.log(currentPage);
   return (
     <div className="App">
       <Header setCurrentPage={setCurrentPage} />
