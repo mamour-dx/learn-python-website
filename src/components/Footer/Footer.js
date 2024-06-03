@@ -9,7 +9,7 @@ import youtubeIcon from '../../assets/icons/socials/youtube.png';
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className='copyright'>
+            <div>
                 <p>&copy; {new Date().getFullYear()} Mamour Dieng. All rights reserved.</p>
             </div>
             <div className="social-media">
