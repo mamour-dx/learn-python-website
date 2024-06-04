@@ -23,7 +23,7 @@ const Header = ({ setCurrentPage }) => {
             </div>
 
             <nav className={isOpen ? "nav-list active" : "nav-list"}>  
-                <a href='home'><li className="nav-item" onClick={() => setCurrentPage('Home')}>
+                <a href='#home'><li className="nav-item" onClick={() => setCurrentPage('Home')}>
                     <img src={homeIcon} alt="Home" className="icon" />Home
                 </li></a>
                 <a href='#quiz'><li className="nav-item" onClick={() => setCurrentPage('Quiz')}>
