@@ -13,7 +13,7 @@ const Header = ({ setCurrentPage }) => {
     return (
         <header className="header">
             <div className='logo-container'>
-            <a href='https://mxr.codes' target='_blank'><img src={logo} alt="Logo" className="logo" /></a>
+            <a href='https://mxr.codes' rel="noreferrer" target='_blank'><img src={logo} alt="Logo" className="logo" /></a>
             </div>
 
             <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>  

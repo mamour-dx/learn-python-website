@@ -13,7 +13,7 @@ const Footer = () => {
                 <p>&copy; {new Date().getFullYear()} Mamour Dieng. All rights reserved.</p>
             </div>
             <div className="social-media">
-                <a href="https://instagram.com/mxr.codes" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com/mxr.codes" rel="noreferrer" target="_blank">
                     <img src={instagramLogo} alt="Instagram" className="social-icon" />
                 </a>
                 <a href="https://github.com/mamour-dx" target="_blank" rel="noopener noreferrer">
@@ -22,7 +22,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/mamour-dieng-394237261/" target="_blank" rel="noopener noreferrer">
                     <img src={linkedinLogo} alt="LinkedIn" className="social-icon" />
                 </a>
-                <a href="https://www.youtube.com/@mxr_codes">
+                <a href="https://www.youtube.com/@mxr_codes" target="_blank" rel="noreferrer">
                     <img src={youtubeIcon} alt="YouTube" className="social-icon" />
                 </a>
                 <a href="mailto:me@mxr.codes">
