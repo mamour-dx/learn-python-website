@@ -1,11 +1,11 @@
 // src/App.js
 import React, { useState } from 'react';
-import Header from './components/Header/Header.js';
-import Footer from './components/Footer/Footer.js';
-import Home from './pages/Home/Home.js';
-import Quiz from './pages/Quiz/Quiz.js';
-import Community from './pages/Community/Community.js';
-import SupportMe from './pages/SupportMe/SupportMe.js';
+import Header from './components/Header/Header.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import Home from './pages/Home/Home.jsx';
+import Quiz from './pages/Quiz/Quiz.jsx';
+import Community from './pages/Community/Community.jsx';
+import SupportMe from './pages/SupportMe/SupportMe.jsx';
 import './App.css';
 
 
