@@ -1,101 +1,11 @@
-body {
-  font-family: 'Arial', sans-serif;
-  box-sizing: border-box;
-  color: #FFF;
-}
-
-.quiz-page {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: row-reverse;
-  padding: 40px;
-  min-height: 100vh;
-  gap: 22px;
-}
-
-.quiz-container {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1); /* White glass effect */
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  margin-right: 20px;
-  width: 100%;
-  max-width: 600px;
-  color: #FFF;
-}
-
-.quiz-title {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.highlight {
-  color: #ffd700; /* Highlighting important words in yellow */
-}
-
-.quiz-box {
-  background: rgba(0, 0, 0, 0.7); /* Darker box for content */
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-.quiz-instruction {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-}
-
-.question {
-  margin-bottom: 10px;
-}
-
-.options {
-  list-style: none;
-  padding: 0;
-}
-
-.option {
-  background: rgba(255, 255, 255, 0.2); /* Slightly see-through option boxes */
-  margin: 10px 0;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.option:hover {
-  background-color: #ffd700; /* Yellow background on hover */
-  transform: scale(1.05);
-}
-
-.submit-btn {
-  background-color: #ffd700; /* Yellow button */
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: opacity 0.3s;
-}
-
-.submit-btn:hover {
-  opacity: 0.9;
-}
-
 .menu-container {
-  flex: 1;
-  background: rgba(255, 255, 255, 0.1); /* White glass effect */
+  background: rgba(255, 255, 255, 0.2); /* Transparent glass effect */
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 20px;
-  max-height: calc(100vh - 80px); /* Full height minus padding */
-  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  width: fit-content;
 }
 
 .menu-title {
@@ -114,10 +24,14 @@ body {
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: 0.3s ease-in-out;
 }
 
 .menu-item:hover {
   background-color: #ffd700; /* Yellow background on hover */
   transform: scale(1.05);
+  /* Slightly rotates on hover */
+  transform: rotate(2deg);
+
+
 }
