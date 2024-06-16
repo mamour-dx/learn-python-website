@@ -15,7 +15,7 @@ function Quiz() {
   ];
 
   return (
-    <div className="menu-container">
+    <div className="welcome-section menu-container">
       <h2 className="menu-title">Quiz Topics</h2>
       <ul className="menu-list">
         {topics.map((topic, index) => (
