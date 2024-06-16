@@ -4,6 +4,7 @@ import './Quiz.css';
 
 
 function Quiz() {
+  
   const topics = [
     'Variables',
     'Data Types',
@@ -15,6 +16,7 @@ function Quiz() {
   ];
 
   return (
+
     <div className="welcome-section menu-container">
       <h2 className="menu-title">Quiz Topics</h2>
       <ul className="menu-list">
@@ -23,6 +25,7 @@ function Quiz() {
         ))}
       </ul>
     </div>
+    
   );
 }
 
