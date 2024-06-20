@@ -19,7 +19,7 @@ export const fetchTopics = async () => {
 
   if (error) {
     console.error('Error fetching topics:', error);
-    return [];
+    throw new Error('Could not fetch topics');
   }
 
   return data;
@@ -34,8 +34,9 @@ export const fetchQuestionsByTopic = async (topicId) => {
 
   if (error) {
     console.error('Error fetching questions:', error);
-    return [];
+    throw new Error('Could not fetch questions');
   }
 
   return data;
 };
+
