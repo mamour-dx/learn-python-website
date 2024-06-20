@@ -1,27 +1,23 @@
 // src/pages/Quiz.jsx
 import React, { useEffect, useState } from 'react';
-import { fetchQuizzes } from '../../supabaseClient';
+import { fetchTopics, fetchQuestionsByTopic } from '../../supabaseClient';
+import QuizCard from './QuizCard';
 import './Quiz.css';
 
 function Quiz() {
   const [topics, setTopics] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedTopic, setSelectedTopic] = useState(null);
+  const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     const getTopics = async () => {
       try {
-        const quizData = await fetchQuizzes();
-        console.log('Fetched quiz data:', quizData); // Log fetched data
-
-        // Extract unique topics from the fetched quiz data
-        const uniqueTopics = [
-          ...new Set(quizData.map(quiz => quiz.topics.name))
-        ];
-
-        setTopics(uniqueTopics);
+        const topicsData = await fetchTopics();
+        setTopics(topicsData);
       } catch (err) {
-        console.error('Error fetching quizzes:', err);
+        console.error('Error fetching topics:', err);
         setError(err);
       } finally {
         setLoading(false);
@@ -30,6 +26,18 @@ function Quiz() {
 
     getTopics();
   }, []);
+
+  const handleTopicClick = async (topic) => {
+    setSelectedTopic(topic);
+    setQuestions([]);
+    try {
+      const questionsData = await fetchQuestionsByTopic(topic.id);
+      setQuestions(questionsData);
+    } catch (err) {
+      console.error('Error fetching questions:', err);
+      setError(err);
+    }
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -40,13 +48,26 @@ function Quiz() {
   }
 
   return (
-    <div className="welcome-section menu-container">
-      <h2 className="menu-title">Quiz Topics</h2>
-      <ul className="menu-list">
-        {topics.map((topic, index) => (
-          <li key={index} className="menu-item">{topic}</li>
-        ))}
-      </ul>
+    <div className="quiz-container">
+      <div className="menu-container">
+        <h2 className="menu-title">Quiz Topics</h2>
+        <ul className="menu-list">
+          {topics.map((topic) => (
+            <li key={topic.id} className="menu-item">
+              <button onClick={() => handleTopicClick(topic)}>{topic.name}</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="quiz-card-container">
+        {selectedTopic && questions.length > 0 ? (
+          <QuizCard topic={selectedTopic} questions={questions} />
+        ) : (
+          <div className="quiz-card">
+            <h2>Select a topic to start the quiz</h2>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
