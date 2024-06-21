@@ -29,7 +29,6 @@ function Quiz() {
 
   const handleTopicClick = async (topic) => {
     setSelectedTopic(topic);
-    setQuestions([]);
     try {
       const questionsData = await fetchQuestionsByTopic(topic.id);
       setQuestions(questionsData);

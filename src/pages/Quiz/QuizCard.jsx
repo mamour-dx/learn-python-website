@@ -13,7 +13,7 @@ const QuizCard = ({ topic, questions }) => {
     setScore(0);
     setSelectedOption(null);
     setShowAnswer(false);
-  }, [topic]);
+  }, [questions]);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -57,6 +57,7 @@ const QuizCard = ({ topic, questions }) => {
             {questions[currentQuestionIndex][optionKey]}
           </button>
         ))}
+        <p>Score: {score}</p>
       </div>
       {showAnswer && <button onClick={handleNextClick}>Next</button>}
     </div>
