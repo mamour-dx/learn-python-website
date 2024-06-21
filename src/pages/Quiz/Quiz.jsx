@@ -48,7 +48,7 @@ function Quiz() {
 
   return (
     <div className="quiz-container">
-      <div className="menu-container">
+      <div className="menu-container glass">
         <h2 className="menu-title">Quiz Topics</h2>
         <ul className="menu-list">
           {topics.map((topic) => (

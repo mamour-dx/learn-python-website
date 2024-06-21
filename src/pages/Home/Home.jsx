@@ -6,7 +6,7 @@ import HomeImg from '../../assets/home.png';
 const Home = () => {
   return (
     <div className="home">
-      <section className="welcome-section">
+      <section className="welcome-section glass">
         <h1>Welcome to the <span className='python-text'>Python</span> Quiz Website!</h1>
         <img src={HomeImg} alt="Python Quiz" />
         <p>Test Your Knowledge with Interactive Quizzes</p>

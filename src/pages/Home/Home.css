@@ -25,11 +25,13 @@ body {
   padding-bottom: 2em;
   border-radius: 15px; 
   margin-bottom: 2em;
+}
+
+.glass {
   background: rgba(255, 255, 255, 0.2); 
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.3);
   border: 6px solid rgba(255, 255, 255, 0.2);
-
 }
 img {
   width: 210px;

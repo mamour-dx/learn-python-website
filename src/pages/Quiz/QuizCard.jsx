@@ -40,7 +40,7 @@ const QuizCard = ({ topic, questions }) => {
   }
 
   return (
-    <div className="quiz-card">
+    <div className="quiz-card glass">
       <h2>Quiz on {topic.name}</h2>
       <p>Question {currentQuestionIndex + 1} of {questions.length}</p>
       <p>{questions[currentQuestionIndex].question_text}</p>
