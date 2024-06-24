@@ -15,11 +15,11 @@ const QuizCard = ({ topic, questions }) => {
     setShowAnswer(false);
   }, [questions]);
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
+  const handleOptionClick = (optionKey) => {
+    setSelectedOption(optionKey);
     setShowAnswer(true);
-    if (option === questions[currentQuestionIndex].correct_option) {
-      setScore(score + 1);
+    if (questions[currentQuestionIndex].correct_option === optionKey) {
+      setScore(prevScore => prevScore + 1);
     }
   };
 
@@ -27,7 +27,7 @@ const QuizCard = ({ topic, questions }) => {
     setShowAnswer(false);
     setSelectedOption(null);
     if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCurrentQuestionIndex(prevIndex => prevIndex + 1);
     } else {
       alert(`Quiz finished! Your score is ${score}/${questions.length}`);
       setCurrentQuestionIndex(0);
@@ -39,26 +39,27 @@ const QuizCard = ({ topic, questions }) => {
     return <div>Loading...</div>;
   }
 
+  const currentQuestion = questions[currentQuestionIndex];
+  const isCorrect = selectedOption === currentQuestion.correct_option;
+
   return (
     <div className="quiz-card glass">
       <h2>Quiz on {topic.name}</h2>
       <p>Question {currentQuestionIndex + 1} of {questions.length}</p>
-      <p>{questions[currentQuestionIndex].question_text}</p>
+      <p>{currentQuestion.question_text}</p>
       <div className="options">
         {['option1', 'option2', 'option3'].map((optionKey) => (
           <button
             key={optionKey}
-            className={`option-button ${showAnswer ? 
-              (questions[currentQuestionIndex].correct_option === optionKey ? 'correct' : 
-              (selectedOption === optionKey ? 'wrong' : '')) : ''}`}
+            className={`option-button ${showAnswer && currentQuestion.correct_option === optionKey ? 'correct' : ''} ${showAnswer && selectedOption === optionKey && currentQuestion.correct_option !== optionKey ? 'wrong' : ''}`}
             onClick={() => handleOptionClick(optionKey)}
             disabled={showAnswer}
           >
-            {questions[currentQuestionIndex][optionKey]}
+            {currentQuestion[optionKey]}
           </button>
         ))}
-        <p>Score: {score}</p>
       </div>
+      <p>Score: {score}</p>
       {showAnswer && <button onClick={handleNextClick}>Next</button>}
     </div>
   );
