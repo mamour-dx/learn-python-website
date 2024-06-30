@@ -1,73 +1,35 @@
-// src/pages/Quiz.jsx
-import React, { useEffect, useState } from 'react';
+// src/components/Quiz.jsx
+import React, { useState, useEffect } from 'react';
 import QuizCard from './QuizCard';
-import './Quiz.css';
 
-function Quiz() {
+const Quiz = () => {
   const [topics, setTopics] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selectedTopic, setSelectedTopic] = useState(null);
-  const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
-    const getTopics = async () => {
-      try {
-        const topicsData = await fetchTopics();
-        setTopics(topicsData);
-      } catch (err) {
-        console.error('Error fetching topics:', err);
-        setError(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    getTopics();
+    fetch('/data/topics.json')
+      .then(response => response.json())
+      .then(data => setTopics(data.topics))
+      .catch(error => console.error('Error fetching topics:', error));
   }, []);
 
-  const handleTopicClick = async (topic) => {
+  const handleTopicSelect = (topic) => {
     setSelectedTopic(topic);
-    try {
-      const questionsData = await fetchQuestionsByTopic(topic.id);
-      setQuestions(questionsData);
-    } catch (err) {
-      console.error('Error fetching questions:', err);
-      setError(err);
-    }
   };
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
-
   return (
-    <div className="quiz-container">
-      <div className="menu-container glass">
-        <h2 className="menu-title">Quiz Topics</h2>
-        <ul className="menu-list">
-          {topics.map((topic) => (
-            <li key={topic.id} className="menu-item">
-              <button onClick={() => handleTopicClick(topic)}>{topic.name}</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="quiz-card-container">
-        {selectedTopic && questions.length > 0 ? (
-          <QuizCard topic={selectedTopic} questions={questions} />
-        ) : (
-          <div className="quiz-card">
-            <h2>Select a topic to start the quiz</h2>
-          </div>
-        )}
-      </div>
+    <div>
+      <h1>Quiz Topics</h1>
+      <ul>
+        {topics.map(topic => (
+          <li key={topic.topic_id}>
+            <button onClick={() => handleTopicSelect(topic)}>{topic.description}</button>
+          </li>
+        ))}
+      </ul>
+      {selectedTopic && <QuizCard topic={selectedTopic} />}
     </div>
   );
-}
+};
 
 export default Quiz;

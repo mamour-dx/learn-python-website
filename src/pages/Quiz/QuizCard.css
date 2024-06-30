@@ -3,6 +3,7 @@
   max-width: 600px;
   padding: 20px;
   border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
@@ -20,6 +21,8 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
   cursor: pointer;
   transition: background 0.3s, border-color 0.3s;
 }
@@ -29,6 +32,10 @@
   border-color: #28a745;
 }
 
+.option-button.wrong {
+  background: #f8d7da;
+  border-color: #dc3545;
+}
 
 .option-button:disabled {
   cursor: not-allowed;

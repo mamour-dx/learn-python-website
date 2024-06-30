@@ -1,12 +1,23 @@
-// src/pages/QuizCard/QuizCard.jsx
+// src/components/QuizCard.jsx
 import React, { useState, useEffect } from 'react';
 import './QuizCard.css';
 
-const QuizCard = ({ topic, questions }) => {
+const QuizCard = ({ topic }) => {
+  const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+
+  useEffect(() => {
+    fetch('/data/quizzes.json')
+      .then(response => response.json())
+      .then(data => {
+        const topicQuestions = data.quizzes.find(quiz => quiz.topic === topic.description).questions;
+        setQuestions(topicQuestions);
+      })
+      .catch(error => console.error('Error fetching quizzes:', error));
+  }, [topic]);
 
   useEffect(() => {
     setCurrentQuestionIndex(0);
@@ -15,10 +26,10 @@ const QuizCard = ({ topic, questions }) => {
     setShowAnswer(false);
   }, [questions]);
 
-  const handleOptionClick = (optionKey) => {
-    setSelectedOption(optionKey);
+  const handleOptionClick = (optionIndex) => {
+    setSelectedOption(optionIndex);
     setShowAnswer(true);
-    if (questions[currentQuestionIndex].correct_option === optionKey) {
+    if (questions[currentQuestionIndex].correct_answer === optionIndex) {
       setScore(prevScore => prevScore + 1);
     }
   };
@@ -40,22 +51,21 @@ const QuizCard = ({ topic, questions }) => {
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  const isCorrect = selectedOption === currentQuestion.correct_option;
 
   return (
     <div className="quiz-card glass">
-      <h2>Quiz on {topic.name}</h2>
+      <h2>Quiz on {topic.description}</h2>
       <p>Question {currentQuestionIndex + 1} of {questions.length}</p>
-      <p>{currentQuestion.question_text}</p>
+      <p>{currentQuestion.question}</p>
       <div className="options">
-        {['option1', 'option2', 'option3'].map((optionKey) => (
+        {currentQuestion.options.map((option, index) => (
           <button
-            key={optionKey}
-            className={`option-button ${showAnswer && currentQuestion.correct_option === optionKey ? 'correct' : ''} ${showAnswer && selectedOption === optionKey && currentQuestion.correct_option !== optionKey ? 'wrong' : ''}`}
-            onClick={() => handleOptionClick(optionKey)}
+            key={index}
+            className={`option-button ${showAnswer && currentQuestion.correct_answer === index ? 'correct' : ''} ${showAnswer && selectedOption === index && currentQuestion.correct_answer !== index ? 'wrong' : ''}`}
+            onClick={() => handleOptionClick(index)}
             disabled={showAnswer}
           >
-            {currentQuestion[optionKey]}
+            {option}
           </button>
         ))}
       </div>
