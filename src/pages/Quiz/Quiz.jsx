@@ -1,6 +1,5 @@
 // src/pages/Quiz.jsx
 import React, { useEffect, useState } from 'react';
-import { fetchTopics, fetchQuestionsByTopic } from '../../supabaseClient';
 import QuizCard from './QuizCard';
 import './Quiz.css';
 
