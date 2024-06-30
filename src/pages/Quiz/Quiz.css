@@ -58,6 +58,7 @@
 
 }
 
+
 .quiz-image {
   height: auto;
   transform: translateX(-50%);
@@ -157,8 +158,7 @@
 
   .quiz-content {
     width: 100%;
-    justify-content: center;
-
+    position: relative;
   }
 
   .quiz-image {
@@ -176,10 +176,13 @@
     margin-top: 40px;
     transform: scale(0.9);
   }
+  .quiz-card,
   .quiz-content {
-    transform: translateX(13%);
     margin: 0;
     padding: 0;
+  }
+  .quiz-card {
+    padding: 10px;
   }
   .topics button {
     padding: 8px;
