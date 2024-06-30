@@ -5,6 +5,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transform: translateX(-13%);
 }
 
 .quiz-card h2 {
@@ -29,11 +30,13 @@
 .option-button.correct {
   background: #d4edda;
   border-color: #28a745;
+  color: black;
 }
 
 .option-button.wrong {
   background: #f8d7da;
   border-color: #dc3545;
+  color: black;
 }
 
 .option-button:disabled {

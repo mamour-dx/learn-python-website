@@ -3,17 +3,25 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+  height: 67vh;
+  align-items: center;
 }
 
 .topics {
-  width: 200px;
-  margin-right: 20px;
+  width: 170px;
+  margin-left: 30px;
   flex-shrink: 0;
+  background-color: rgba(70, 151, 232, 0.297);
+  padding: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
 }
 
 .topics h1 {
+  text-align: center;
   font-size: 24px;
   margin-bottom: 10px;
+
 }
 
 .topics ul {
@@ -26,18 +34,20 @@
 }
 
 .topics button {
+  font-weight: bold;
   width: 100%;
   padding: 10px;
   background-color: #007bff;
-  color: white;
+  color: rgb(227, 240, 255);
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: ease-in-out 0.3s;
 }
 
 .topics button:hover {
   background-color: #0056b3;
+  transform: scale(1.05) rotate(1deg);
 }
 
 .quiz-content {
@@ -45,14 +55,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
 }
 
 .quiz-image {
-  max-width: 100%;
   height: auto;
-  display: block;
+  transform: translateX(-50%);
 }
+
 .loading-wave {
   width: 300px;
   height: 100px;
@@ -95,4 +105,85 @@
     height: 10px;
   }
 }
+/* src/components/animations.css */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+/* src/components/animations.css */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease-out;
+}
+
+/* src/components/mediaqueries.css */
+@media (max-width: 768px) {
+  .quiz-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    height: auto;
+  }
+
+  .topics {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+    background-color: rgba(70, 151, 232, 0.297);
+    padding: 10px;
+    box-shadow: none;
+    border-radius: 12px;
+  }
+
+  .quiz-content {
+    width: 100%;
+    justify-content: center;
+
+  }
+
+  .quiz-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topics h1 {
+    font-size: 20px;
+  }
+  .topics {
+    width: 60%;
+    align-self: center;
+    margin-top: 40px;
+    transform: scale(0.9);
+  }
+  .quiz-content {
+    transform: translateX(13%);
+    margin: 0;
+    padding: 0;
+  }
+  .topics button {
+    padding: 8px;
+  }
+}
+
 

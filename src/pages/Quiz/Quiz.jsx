@@ -1,7 +1,7 @@
 // src/components/Quiz.jsx
 import React, { useState, useEffect } from 'react';
 import QuizCard from './QuizCard';
-import './Quiz.css'; 
+import './Quiz.css';
 
 const Quiz = () => {
   const [topics, setTopics] = useState([]);
@@ -25,9 +25,8 @@ const Quiz = () => {
   return (
     <div className="quiz-container">
       <div className="topics">
-        <h1>Quiz Topics</h1>
+        <h1>Menu Quiz</h1>
         {loading ? (
-          <div className="loader-container">
           <div className="loader-container">
             <div className="loading-wave">
               <div className="loading-bar"></div>
@@ -36,7 +35,6 @@ const Quiz = () => {
               <div className="loading-bar"></div>
             </div>
           </div>
-        </div>
         ) : (
           <ul>
             {topics.map(topic => (
@@ -47,8 +45,8 @@ const Quiz = () => {
           </ul>
         )}
       </div>
-      <div className="quiz-content">
-        {!selectedTopic && !loading && <img src="/assets/quiz-time.png" alt="Quiz Time" className="quiz-image" />}
+      <div className="quiz-content zoom-in">
+        {!selectedTopic && !loading && <img src="src/assets/quiz-time.png" alt="Quiz Time" className="quiz-image" />}
         {selectedTopic && <QuizCard topic={selectedTopic} />}
       </div>
     </div>

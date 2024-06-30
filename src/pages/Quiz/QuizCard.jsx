@@ -78,8 +78,8 @@ const QuizCard = ({ topic }) => {
   const currentQuestion = questions[currentQuestionIndex];
 
   return (
-    <div className="quiz-card glass">
-      <h2>Quiz on {topic.description}</h2>
+    <div className="zoom-in quiz-card glass">
+      <h2>Quiz sur {topic.description}</h2>
       <p>Question {currentQuestionIndex + 1} of {questions.length}</p>
       <p>{currentQuestion.question}</p>
       <div className="options">
