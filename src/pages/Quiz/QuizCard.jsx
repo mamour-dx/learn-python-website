@@ -1,6 +1,6 @@
 // src/components/QuizCard.jsx
 import React, { useState, useEffect } from 'react';
-import './QuizCard.css';
+import './QuizCard.css'; 
 
 const QuizCard = ({ topic }) => {
   const [questions, setQuestions] = useState([]);
@@ -8,15 +8,25 @@ const QuizCard = ({ topic }) => {
   const [score, setScore] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [loading, setLoading] = useState(true); // State for loading
 
   useEffect(() => {
+    setLoading(true);
     fetch('/data/quizzes.json')
       .then(response => response.json())
       .then(data => {
-        const topicQuestions = data.quizzes.find(quiz => quiz.topic === topic.description).questions;
-        setQuestions(topicQuestions);
+        const quiz = data.quizzes.find(quiz => quiz.topic.toLowerCase() === topic.description.toLowerCase());
+        if (quiz) {
+          setQuestions(quiz.questions);
+        } else {
+          setQuestions([]); // No questions found for the selected topic
+        }
+        setLoading(false); // Set loading to false after data is fetched
       })
-      .catch(error => console.error('Error fetching quizzes:', error));
+      .catch(error => {
+        console.error('Error fetching quizzes:', error);
+        setLoading(false);
+      });
   }, [topic]);
 
   useEffect(() => {
@@ -46,8 +56,23 @@ const QuizCard = ({ topic }) => {
     }
   };
 
+  if (loading) {
+    return (
+       <div className="loader-container">
+          <div className="loader-container">
+            <div className="loading-wave">
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+              <div className="loading-bar"></div>
+            </div>
+          </div>
+        </div>
+    );
+  }
+
   if (!questions.length) {
-    return <div>Loading...</div>;
+    return <div>No questions available.</div>;
   }
 
   const currentQuestion = questions[currentQuestionIndex];
@@ -69,7 +94,7 @@ const QuizCard = ({ topic }) => {
           </button>
         ))}
       </div>
-      <p>Score: {score}</p>
+      <p>Score: {score}/{questions.length}</p>
       {showAnswer && <button onClick={handleNextClick}>Next</button>}
     </div>
   );
