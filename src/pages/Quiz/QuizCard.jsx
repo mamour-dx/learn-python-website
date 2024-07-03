@@ -1,6 +1,7 @@
 // src/components/QuizCard.jsx
 import React, { useState, useEffect } from 'react';
-import './QuizCard.css'; 
+import './QuizCard.css';
+import { randomArray } from '../../utils/random'; // Import the shuffle function
 
 const QuizCard = ({ topic }) => {
   const [questions, setQuestions] = useState([]);
@@ -17,7 +18,7 @@ const QuizCard = ({ topic }) => {
       .then(data => {
         const quiz = data.quizzes.find(quiz => quiz.topic.toLowerCase() === topic.description.toLowerCase());
         if (quiz) {
-          setQuestions(quiz.questions);
+          setQuestions(randomArray(quiz.questions)); // Shuffle questions
         } else {
           setQuestions([]); // No questions found for the selected topic
         }
@@ -58,16 +59,14 @@ const QuizCard = ({ topic }) => {
 
   if (loading) {
     return (
-       <div className="loader-container">
-          <div className="loader-container">
-            <div className="loading-wave">
-              <div className="loading-bar"></div>
-              <div className="loading-bar"></div>
-              <div className="loading-bar"></div>
-              <div className="loading-bar"></div>
-            </div>
-          </div>
+      <div className="loader-container">
+        <div className="loading-wave">
+          <div className="loading-bar"></div>
+          <div className="loading-bar"></div>
+          <div className="loading-bar"></div>
+          <div className="loading-bar"></div>
         </div>
+      </div>
     );
   }
 
