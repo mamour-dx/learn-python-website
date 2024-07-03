@@ -150,6 +150,11 @@
                     "correct_answer": 0
                 },
                 {
+                    "question": "Quelle est la différence principale entre une liste et un tuple en Python?",
+                    "options": ["Les listes sont immuables et les tuples sont muables", "Les listes sont triées et les tuples ne le sont pas", "Les listes sont muables et les tuples sont immuables", "Les listes peuvent contenir des types différents et les tuples ne le peuvent pas"],
+                    "correct_answer": 2
+                },
+                {
                     "question": "Quel type de données utiliseriez-vous pour stocker une séquence de caractères en Python?",
                     "options": ["str", "list", "dict"],
                     "correct_answer": 0
@@ -220,6 +225,56 @@
                     "correct_answer": 0
                 },
                 {
+                    "question": "Quel mot-clé est utilisé pour gérer des exceptions spécifiques en Python?",
+                    "options": ["try", "except", "finally"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 3; while x < 10: x += 2; print(x)",
+                    "options": ["10", "9", "Erreur"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour tester une condition en Python?",
+                    "options": ["check", "if", "test"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 0; while x < 3: x += 1; if x == 2: break; print(x)",
+                    "options": ["1 2", "1", "Erreur"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute un nombre spécifique de fois?",
+                    "options": ["for", "while", "loop"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : if not True: print('Faux') else: print('Vrai')",
+                    "options": ["Vrai", "Faux", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour ignorer un bloc de code dans une boucle sans interrompre la boucle?",
+                    "options": ["break", "skip", "continue"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(5, 1, -1): print(i)",
+                    "options": ["5 4 3 2", "4 3 2 1", "5 4 3 2 1"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code après une boucle for en Python même si la boucle est interrompue par break?",
+                    "options": ["finally", "end", "else"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(2): for j in range(2): print(i, j)",
+                    "options": ["0 0 0 1 1 0 1 1", "0 0 1 1", "0 0 0 1 1 0 1 1 2 0 2 1"],
+                    "correct_answer": 0
+                },
+                {
                     "question": "Quel mot-clé est utilisé pour vérifier plusieurs conditions en Python?",
                     "options": ["else", "elif", "switch"],
                     "correct_answer": 1
@@ -265,9 +320,9 @@
             "topic": "Boucles",
             "questions": [
                 {
-                    "question": "Comment commencez-vous une boucle while en Python?",
-                    "options": ["while i in range(5):", "while i < 5:", "while (i < 5)"],
-                    "correct_answer": 1
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute un nombre spécifique de fois?",
+                    "options": ["for", "while", "loop"],
+                    "correct_answer": 0
                 },
                 {
                     "question": "Quelle est la sortie du code suivant : for i in range(3): print(i)",
@@ -275,8 +330,8 @@
                     "correct_answer": 0
                 },
                 {
-                    "question": "Quelle est la sortie du code suivant : x = 10; while x > 0: print(x); x -= 2",
-                    "options": ["10 8 6 4 2", "10 9 8 7 6 5 4 3 2 1", "Erreur"],
+                    "question": "Quelle est la sortie du code suivant : for i in range(5, 1, -1): print(i)",
+                    "options": ["5 4 3 2", "4 3 2 1", "5 4 3 2 1"],
                     "correct_answer": 0
                 },
                 {
@@ -290,29 +345,54 @@
                     "correct_answer": 1
                 },
                 {
-                    "question": "Quelle est la sortie du code suivant : for i in range(5): if i == 3: break; print(i)",
-                    "options": ["0 1 2", "0 1 2 3", "0 1 2 3 4"],
+                    "question": "Quelle est la sortie du code suivant : for i in range(2): for j in range(2): print(i, j)",
+                    "options": ["0 0 0 1 1 0 1 1", "0 0 1 1", "0 0 0 1 1 0 1 1 2 0 2 1"],
                     "correct_answer": 0
                 },
                 {
-                    "question": "Quelle est la sortie du code suivant : for i in range(5): if i == 3: continue; print(i)",
-                    "options": ["0 1 2 4", "0 1 2 3 4", "1 2 4"],
+                    "question": "Quelle est la sortie du code suivant : x = 10; while x > 0: print(x); x -= 2",
+                    "options": ["10 8 6 4 2", "10 9 8 7 6 5 4 3 2 1", "Erreur"],
                     "correct_answer": 0
                 },
                 {
-                    "question": "Quelle est la sortie du code suivant : i = 0; while i < 3: i += 1; print(i)",
-                    "options": ["1 2 3", "1 2 3 4", "3"],
-                    "correct_answer": 2
-                },
-                {
-                    "question": "Comment définissez-vous une boucle for en Python?",
-                    "options": ["for i = 0 to 5", "for i in range(5)", "for i in 0..5"],
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute tant qu'une condition est vraie?",
+                    "options": ["for", "while", "loop"],
                     "correct_answer": 1
                 },
                 {
-                    "question": "Comment définissez-vous une boucle infinie en Python?",
-                    "options": ["while True:", "while 1:", "while (1):"],
+                    "question": "Quelle est la sortie du code suivant : x = 3; while x < 10: x += 2; print(x)",
+                    "options": ["10", "9", "Erreur"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3, 0, -1): print(i)",
+                    "options": ["3 2 1", "2 1 0", "3 2 1 0"],
                     "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code après une boucle for en Python même si la boucle est interrompue par break?",
+                    "options": ["finally", "end", "else"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 0; while x < 3: x += 1; if x == 2: break; print(x)",
+                    "options": ["1 2", "1", "Erreur"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(1, 5): if i == 3: continue; print(i)",
+                    "options": ["1 2 4 5", "1 2 3 4", "1 2 4"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel est l'effet de l'utilisation de 'pass' dans une boucle?",
+                    "options": ["Sort de la boucle", "Ignore cette itération", "Ne fait rien et continue"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3): pass; print(i)",
+                    "options": ["0", "2", "Erreur"],
+                    "correct_answer": 1
                 }
             ]
         },
