@@ -1,68 +1,74 @@
 /* src/pages/Community.css */
 .community-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .cta-section {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+.cta-section {
+  text-align: center;
+  height: auto;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.cta-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.discord-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #7289da;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+
+.discord-button:hover {
+  background-color: #5a6fb2;
+}
+
+.testimonial-slider {
+  width: 100%;
+  max-width: 800px;
+  border: 5px solid #5484b3bf;
+  border-radius: 20px;
+}
+.testimonial-slider:hover {
+  box-shadow: 0 0 10px rgba(255, 250, 250);
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
   .cta-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 28px;
   }
-  
+
   .cta-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    font-size: 16px;
   }
-  
+
   .discord-button {
-    padding: 15px 30px;
-    font-size: 18px;
-    color: white;
-    background-color: #7289da;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    padding: 10px 20px;
   }
-  
-  .discord-button:hover {
-    background-color: #5a6fb2;
-  }
-  
-  .testimonial-slider {
-    width: 80%;
-    max-width: 800px;
-  }
-  
-  .slide img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 768px) {
-    .cta-section h1 {
-      font-size: 28px;
-    }
-  
-    .cta-section p {
-      font-size: 16px;
-    }
-  
-    .discord-button {
-      font-size: 16px;
-      padding: 10px 20px;
-    }
-  }
-  
+}
