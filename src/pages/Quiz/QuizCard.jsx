@@ -13,7 +13,7 @@ const QuizCard = ({ topic }) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch('/data/quizzes.json')
+    fetch('src/data/quizzes.json')
       .then(response => response.json())
       .then(data => {
         const quiz = data.quizzes.find(quiz => quiz.topic.toLowerCase() === topic.description.toLowerCase());

@@ -9,7 +9,7 @@ const Quiz = () => {
   const [loading, setLoading] = useState(true); // State for loading
 
   useEffect(() => {
-    fetch('/data/topics.json')
+    fetch('src/data/topics.json')
       .then(response => response.json())
       .then(data => {
         setTopics(data.topics);
