@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "vite",
+    "preview": "vite preview --port 8080",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "test": "vitest",
