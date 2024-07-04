@@ -1,0 +1,13 @@
+#kofiframe {
+  border-radius: 10px;
+  border: 1.5px solid #ffd700;
+  box-shadow: 0px 0px 10px rgba(186, 174, 210, 0.44);
+}
+
+.avis {
+    text-align: center;
+}
+.avis a {
+    color: #ffd700;
+    text-decoration: underline;
+}
