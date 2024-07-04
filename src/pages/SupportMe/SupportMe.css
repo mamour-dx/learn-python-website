@@ -1,11 +1,57 @@
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+    border-radius: 20px;
+    padding: 8px;
+}
+.support-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.donate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: min-content;
+
+}
+.donation-cta {
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+
+}
+.kofi-profile {
+    color: #ffd700;
+    font-style: italic;
+}
+.kofi-profile:hover {
+    text-decoration: underline;
+}
+.support-content {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    width: 70%;
+}
 #kofiframe {
   border-radius: 10px;
   border: 1.5px solid #ffd700;
   box-shadow: 0px 0px 10px rgba(186, 174, 210, 0.44);
 }
+.donation-info {
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+}
 
 .avis {
     text-align: center;
+    transform: translateY(600%);
 }
 .avis a {
     color: #ffd700;
