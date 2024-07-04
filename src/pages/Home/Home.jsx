@@ -1,18 +1,24 @@
-// src/pages/Home.js
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import HomeImg from '../../assets/home.png';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (pageIndex) => {
+    navigate(pageIndex);
+  };
+
   return (
     <div className="home">
       <section className="welcome-section glass">
         <h1>Welcome to the <span className='python-text'>Python</span> Quiz Website!</h1>
         <img src={HomeImg} alt="Python Quiz" />
-        <p>Test Your Knowledge with Interactive Quizzes</p>
+        <p>Testes tes connaissances avec des quizs interactifs</p>
         <div className="cta-buttons">
-          <button className="cta-button">Get Started</button>
-          <button className="cta-button">Learn More</button>
+          <button className="cta-button" onClick={() => handleButtonClick('/quiz')}>Get Started</button>
+          <button className="cta-button" onClick={() => handleButtonClick('/community')}>Learn More</button>
         </div>
       </section>
     
@@ -31,19 +37,20 @@ const Home = () => {
       <section className="section">
         <h2>Top Quizzes</h2>
         <p>Check out our most popular quizzes to test and improve your Python skills.</p>
-        <button className="cta-button">Start Quiz</button>
+        <button className="cta-button" onClick={() => handleButtonClick('/quiz')}>Start Quiz</button>
       </section>
       <section className="section community-section">
         <h2>Join the Community</h2>
         <p>Connect with other Python enthusiasts, share knowledge, and get support.</p>
-        <button className="cta-button">Join Now</button>
+        <button className="cta-button"><a href='https://discord.com/invite/ZSGzxgDrkP' target='_blank'>Join Now</a></button>
       </section>
       <section className="section">
         <h2>Resources</h2>
         <p>Explore our resources including articles, tutorials, and free downloadable content.</p>
-        <button className="cta-button">Cheat Sheets</button>
+        <button className="cta-button"><a href="https://store.mxr.codes" target='_blank'>Cheat Sheets</a></button>
       </section>
     </div>
   );
 };
+
 export default Home;
