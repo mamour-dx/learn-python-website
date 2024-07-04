@@ -46,7 +46,13 @@ h1 {
 .donation-info {
     text-align: center;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 0.8rem;
+}
+.Share {
+    border-radius: 20px;
+    padding: 15px;
+    width: 400px;
+    text-align: center;
 }
 
 .avis {
