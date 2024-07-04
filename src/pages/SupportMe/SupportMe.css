@@ -11,6 +11,11 @@ h1 {
     flex-direction: column;
 
 }
+.Share img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 70px;
+}
 .donate {
     display: flex;
     flex-direction: column;
@@ -62,4 +67,72 @@ h1 {
 .avis a {
     color: #ffd700;
     text-decoration: underline;
+}
+.Share, .donate {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .share-url-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .share-url-textarea {
+    width: 46%;
+    font-size: 0.8rem ;
+    max-width: 400px;
+    color: #ffd700;
+    overflow: hidden;
+    background-color:rgba(45, 55, 68, 0.397);
+    height: 8px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bffc6;
+    resize: none;
+    text-align: center;
+  }
+  
+  .copy-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .copy-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .copied-notification {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4caf50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+.Share > * {
+    margin-bottom: 60px;
 }

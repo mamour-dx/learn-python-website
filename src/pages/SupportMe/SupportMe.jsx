@@ -1,19 +1,38 @@
-import React from 'react';
+// src/pages/SupportMe.jsx
+import React, { useState } from 'react';
 import './SupportMe.css';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const SupportMe = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    setCopied(true);
+    setTimeout(() => setCopied(false), 3000); // Reset copied state after 3 seconds
+  };
+
   return (
     <div className='support-me'>
       <h1 className='glass'>Merci d'avoir utilisé mon application⭐️</h1>
       <div className='support-content'>
-        <div className='Share'>
-          <h2 className='share'>Partages à un ami</h2>
+        <div className='Share zoom-in'>
+          <h2 className='share'><span className='kofi-profile'>Partages</span> à un ami</h2>
           <h3>Envoie le site à un ami qui pourrait être intéressé par apprendre python ?</h3>
           <img src="src/assets/share.svg" alt="share" />
-        
-          
+          <div className="share-url-container">
+            <textarea
+              value="https://python.mxr.codes"
+              readOnly
+              className="share-url-textarea"
+            />
+            <CopyToClipboard text="https://python.mxr.codes" onCopy={handleCopy}>
+              <button className="copy-button">
+                {copied ? 'Copied!' : 'Copy'}
+              </button>
+            </CopyToClipboard>
+          </div>
         </div>
-        <div className='donate'>
+        <div className='donate zoom-in'>
           <h2 className='donation-cta'>Vous pouvez aussi faire un <a href='https://ko-fi.com/mxrcodes' className='kofi-profile' target='_blank' rel="noopener noreferrer">don</a></h2>
           <iframe
             id="kofiframe"
@@ -31,4 +50,3 @@ const SupportMe = () => {
 };
 
 export default SupportMe;
-
