@@ -1,15 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Home.css';
 import HomeImg from '../../assets/home.png';
 
 const Home = () => {
-  const navigate = useNavigate();
-
-  const handleButtonClick = (pageIndex) => {
-    navigate(pageIndex);
-  };
-
   return (
     <div className="home">
       <section className="welcome-section glass">
@@ -17,8 +10,8 @@ const Home = () => {
         <img src={HomeImg} alt="Python Quiz" />
         <p>Testes tes connaissances avec des quizs interactifs</p>
         <div className="cta-buttons">
-          <button className="cta-button" onClick={() => handleButtonClick('/quiz')}>Get Started</button>
-          <button className="cta-button" onClick={() => handleButtonClick('/community')}>Learn More</button>
+          <button className="cta-button"><a href="https://python.mxr.codes/quiz">Get Started</a></button>
+          <button className="cta-button"><a href="https://python.mxr.codes/community">Learn More</a></button>
         </div>
       </section>
     
@@ -37,7 +30,7 @@ const Home = () => {
       <section className="section">
         <h2>Top Quizzes</h2>
         <p>Check out our most popular quizzes to test and improve your Python skills.</p>
-        <button className="cta-button" onClick={() => handleButtonClick('/quiz')}>Start Quiz</button>
+        <button className="cta-button"><a href="https://python.mxr.codes/quiz">Start Quiz</a></button>
       </section>
       <section className="section community-section">
         <h2>Join the Community</h2>
