@@ -1,0 +1,566 @@
+{
+    "quizzes": [
+        {
+            "topic": "Variables",
+            "questions": [
+                {
+                    "question": "Quelle est la manière correcte d'assigner une valeur à une variable en Python?",
+                    "options": ["x = 5", "x := 5", "x <- 5"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des noms de variable suivants est valide en Python?",
+                    "options": ["1variable", "variable1", "var-iable"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel est le résultat de ce code : x = 10; print(x) ?",
+                    "options": ["10", "x", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour définir une variable en Python?",
+                    "options": ["var", "let", "Aucun mot-clé n'est nécessaire"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Un nom de variable peut-il commencer par un chiffre en Python?",
+                    "options": ["Oui", "Non", "Seulement avec un underscore"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la valeur de y après ce code : x = 5; y = x + 2 ?",
+                    "options": ["7", "5", "2"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des types de données suivants est mutable?",
+                    "options": ["int", "str", "list"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la syntaxe correcte pour supprimer une variable en Python?",
+                    "options": ["del x", "remove x", "delete x"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel est le résultat de ce code : x = 'Bonjour'; print(x) ?",
+                    "options": ["Bonjour", "x", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des mots-clés suivants est réservé en Python et ne peut pas être utilisé comme nom de variable?",
+                    "options": ["class", "mon_var", "data"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel sera le résultat de ce code : x = 5; y = 3; z = x * y; print(z) ?",
+                    "options": ["15", "8", "5"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des noms de variable suivants n'est pas autorisé en Python?",
+                    "options": ["maVar", "_var", "2var"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Comment pouvez-vous échanger les valeurs de deux variables x et y en Python?",
+                    "options": ["x, y = y, x", "swap(x, y)", "x = y; y = x"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel sera le résultat de ce code : x = '5'; y = int(x); print(y) ?",
+                    "options": ["5", "5.0", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des éléments suivants peut être utilisé comme nom de variable en Python?",
+                    "options": ["ma_var", "ma-var", "ma var"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel est le résultat de ce code : x = 10; y = x + 5; print(y) ?",
+                    "options": ["15", "10", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la valeur de la variable z après ce code : x = 3; y = 4; z = x + y ?",
+                    "options": ["7", "12", "34"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel sera le résultat de ce code : a, b = 5, 10; print(a, b) ?",
+                    "options": ["5 10", "10 5", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une variable globale à l'intérieur d'une fonction?",
+                    "options": ["global x", "def x", "var x"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie de ce code : x = 'Python'; y = x + ' est génial'; print(y) ?",
+                    "options": ["Python est génial", "x est génial", "Erreur"],
+                    "correct_answer": 0
+                }
+            ]
+        },
+        
+        {
+            "topic": "Types de données",
+            "questions": [
+                {
+                    "question": "Quel type de données représente la valeur 3.14 en Python?",
+                    "options": ["int", "float", "str"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel type de données utiliseriez-vous pour stocker la valeur 'Bonjour, le monde!'?",
+                    "options": ["str", "list", "dict"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : type(42) ?",
+                    "options": ["int", "float", "str"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel type de données est utilisé pour stocker les valeurs Vrai ou Faux en Python?",
+                    "options": ["int", "str", "bool"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel est le type de données de ce qui suit : [1, 2, 3] ?",
+                    "options": ["list", "tuple", "set"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel est le type de données de ce qui suit : (1, 2, 3) ?",
+                    "options": ["list", "tuple", "dict"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel type de données est utilisé pour stocker une collection de paires clé-valeur ?",
+                    "options": ["list", "tuple", "dict"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : type('Python') ?",
+                    "options": ["str", "list", "int"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la différence principale entre une liste et un tuple en Python?",
+                    "options": ["Les listes sont immuables et les tuples sont muables", "Les listes sont triées et les tuples ne le sont pas", "Les listes sont muables et les tuples sont immuables", "Les listes peuvent contenir des types différents et les tuples ne le peuvent pas"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel type de données utiliseriez-vous pour stocker une séquence de caractères en Python?",
+                    "options": ["str", "list", "dict"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : type(True) ?",
+                    "options": ["int", "bool", "str"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Lequel des types de données suivants est immuable en Python?",
+                    "options": ["list", "set", "tuple"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel est le type de données de ce qui suit : {'nom': 'Alice', 'âge': 25} ?",
+                    "options": ["list", "dict", "set"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel type de données utiliseriez-vous pour stocker des valeurs uniques en Python?",
+                    "options": ["list", "tuple", "set"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : type({1, 2, 3}) ?",
+                    "options": ["list", "set", "dict"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel est le type de données de ce qui suit : (1,)?",
+                    "options": ["list", "tuple", "set"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Comment définissez-vous une liste vide en Python?",
+                    "options": ["[]", "()", "{}"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel type de données est une chaîne de caractères en Python?",
+                    "options": ["str", "list", "int"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : type([1, 'a', True]) ?",
+                    "options": ["list", "tuple", "set"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel type de données utiliseriez-vous pour stocker une séquence ordonnée et immuable en Python?",
+                    "options": ["list", "tuple", "dict"],
+                    "correct_answer": 1
+                }
+            ]
+        },
+        {
+            "topic": "Contrôle de flux",
+            "questions": [
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code sous une condition en Python?",
+                    "options": ["for", "while", "if"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : if 5 > 3: print('Vrai')",
+                    "options": ["Vrai", "Faux", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour gérer des exceptions spécifiques en Python?",
+                    "options": ["try", "except", "finally"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 3; while x < 10: x += 2; print(x)",
+                    "options": ["10", "9", "Erreur"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour tester une condition en Python?",
+                    "options": ["check", "if", "test"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 0; while x < 3: x += 1; if x == 2: break; print(x)",
+                    "options": ["1 2", "1", "Erreur"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute un nombre spécifique de fois?",
+                    "options": ["for", "while", "loop"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : if not True: print('Faux') else: print('Vrai')",
+                    "options": ["Vrai", "Faux", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour ignorer un bloc de code dans une boucle sans interrompre la boucle?",
+                    "options": ["break", "skip", "continue"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(5, 1, -1): print(i)",
+                    "options": ["5 4 3 2", "4 3 2 1", "5 4 3 2 1"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code après une boucle for en Python même si la boucle est interrompue par break?",
+                    "options": ["finally", "end", "else"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(2): for j in range(2): print(i, j)",
+                    "options": ["0 0 0 1 1 0 1 1", "0 0 1 1", "0 0 0 1 1 0 1 1 2 0 2 1"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour vérifier plusieurs conditions en Python?",
+                    "options": ["else", "elif", "switch"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code si aucune des conditions précédentes n'est vraie?",
+                    "options": ["if", "elif", "else"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : if 5 < 3: print('Vrai') else: print('Faux')",
+                    "options": ["Vrai", "Faux", "Erreur"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour sortir d'une boucle en Python?",
+                    "options": ["stop", "exit", "break"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour passer à l'itération suivante d'une boucle en Python?",
+                    "options": ["skip", "continue", "pass"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3): print(i)",
+                    "options": ["0 1 2", "1 2 3", "0 1 2 3"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 10; while x > 0: print(x); x -= 2",
+                    "options": ["10 8 6 4 2", "10 9 8 7 6 5 4 3 2 1", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour définir une exception en Python?",
+                    "options": ["try", "except", "catch"],
+                    "correct_answer": 1
+                }
+            ]
+        },
+        {
+            "topic": "Boucles",
+            "questions": [
+                {
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute un nombre spécifique de fois?",
+                    "options": ["for", "while", "loop"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3): print(i)",
+                    "options": ["0 1 2", "1 2 3", "0 1 2 3"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(5, 1, -1): print(i)",
+                    "options": ["5 4 3 2", "4 3 2 1", "5 4 3 2 1"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour sortir d'une boucle en Python?",
+                    "options": ["stop", "exit", "break"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour passer à l'itération suivante d'une boucle en Python?",
+                    "options": ["skip", "continue", "pass"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(2): for j in range(2): print(i, j)",
+                    "options": ["0 0 0 1 1 0 1 1", "0 0 1 1", "0 0 0 1 1 0 1 1 2 0 2 1"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 10; while x > 0: print(x); x -= 2",
+                    "options": ["10 8 6 4 2", "10 9 8 7 6 5 4 3 2 1", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour créer une boucle qui s'exécute tant qu'une condition est vraie?",
+                    "options": ["for", "while", "loop"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 3; while x < 10: x += 2; print(x)",
+                    "options": ["10", "9", "Erreur"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3, 0, -1): print(i)",
+                    "options": ["3 2 1", "2 1 0", "3 2 1 0"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quel mot-clé est utilisé pour exécuter du code après une boucle for en Python même si la boucle est interrompue par break?",
+                    "options": ["finally", "end", "else"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : x = 0; while x < 3: x += 1; if x == 2: break; print(x)",
+                    "options": ["1 2", "1", "Erreur"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(1, 5): if i == 3: continue; print(i)",
+                    "options": ["1 2 4 5", "1 2 3 4", "1 2 4"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quel est l'effet de l'utilisation de 'pass' dans une boucle?",
+                    "options": ["Sort de la boucle", "Ignore cette itération", "Ne fait rien et continue"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : for i in range(3): pass; print(i)",
+                    "options": ["0", "2", "Erreur"],
+                    "correct_answer": 1
+                }
+            ]
+        },
+        {
+            "topic": "Fonctions",
+            "questions": [
+                {
+                    "question": "Comment définissez-vous une fonction en Python?",
+                    "options": ["function maFonction():", "def maFonction():", "def maFonction {}"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Comment appelez-vous une fonction nommée maFonction en Python?",
+                    "options": ["call maFonction()", "maFonction()", "execute maFonction()"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : def add(a, b): return a + b; print(add(2, 3))",
+                    "options": ["2", "3", "5"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : def foo(): return 1; x = foo(); print(x)",
+                    "options": ["1", "foo", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : def foo(a, b=2): return a + b; print(foo(3))",
+                    "options": ["5", "3", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une fonction lambda en Python?",
+                    "options": ["lambda x, y: x + y", "lambda (x, y) { x + y }", "def lambda(x, y): return x + y"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : f = lambda x, y: x * y; print(f(2, 3))",
+                    "options": ["6", "5", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une fonction avec des arguments variables?",
+                    "options": ["def foo(*args):", "def foo(args):", "def foo(*args) {}"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : def foo(): pass; print(foo())",
+                    "options": ["None", "0", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une fonction avec des arguments nommés en Python?",
+                    "options": ["def foo(**kwargs):", "def foo(kwargs):", "def foo(**kwargs) {}"],
+                    "correct_answer": 0
+                }
+            ]
+        },
+        {
+            "topic": "Modules",
+            "questions": [
+                {
+                    "question": "Comment importez-vous un module en Python?",
+                    "options": ["import module_name", "include module_name", "using module_name"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Lequel des modules suivants est un module standard en Python?",
+                    "options": ["random", "numpy", "pandas"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : import math; print(math.sqrt(16))",
+                    "options": ["4.0", "4", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment importez-vous uniquement la fonction sqrt du module math?",
+                    "options": ["from math import sqrt", "import sqrt from math", "include sqrt from math"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment importez-vous un module en lui donnant un alias?",
+                    "options": ["import module_name as alias", "import module_name alias", "using module_name as alias"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment listez-vous toutes les fonctions disponibles dans un module?",
+                    "options": ["dir(module_name)", "list(module_name)", "functions(module_name)"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment réimportez-vous un module en Python?",
+                    "options": ["reload(module_name)", "import module_name", "importlib.reload(module_name)"],
+                    "correct_answer": 2
+                },
+                {
+                    "question": "Comment importez-vous toutes les fonctions d'un module?",
+                    "options": ["from module_name import *", "import * from module_name", "include * from module_name"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment obtenez-vous de l'aide sur un module en Python?",
+                    "options": ["help(module_name)", "doc(module_name)", "info(module_name)"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : import os; print(os.name)",
+                    "options": ["posix", "nt", "Erreur"],
+                    "correct_answer": 0
+                }
+            ]
+        },
+        {
+            "topic": "Classes",
+            "questions": [
+                {
+                    "question": "Comment définissez-vous une classe en Python?",
+                    "options": ["class MaClasse:", "define MaClasse:", "create MaClasse:"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment créez-vous une instance d'une classe en Python?",
+                    "options": ["MaClasse = new MaClasse()", "MaClasse = MaClasse()", "MaClasse : MaClasse()"],
+                    "correct_answer": 1
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : class MaClasse: pass; instance = MaClasse(); print(type(instance))",
+                    "options": ["<class '__main__.MaClasse'>", "<type 'MaClasse'>", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous un constructeur dans une classe en Python?",
+                    "options": ["def __init__(self):", "def MaClasse(self):", "def new(self):"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une méthode dans une classe en Python?",
+                    "options": ["def ma_methode(self):", "define ma_methode(self):", "def ma_methode:"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment accédez-vous à un attribut de classe en Python?",
+                    "options": ["self.attribut", "class.attribut", "this.attribut"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment héritez-vous d'une classe en Python?",
+                    "options": ["class SousClasse(MaClasse):", "class SousClasse extends MaClasse:", "class SousClasse inherits MaClasse:"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment appelez-vous une méthode de la classe parente en Python?",
+                    "options": ["super().methode()", "parent.methode()", "base.methode()"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Quelle est la sortie du code suivant : class MaClasse: def __init__(self): self.valeur = 10; instance = MaClasse(); print(instance.valeur)",
+                    "options": ["10", "None", "Erreur"],
+                    "correct_answer": 0
+                },
+                {
+                    "question": "Comment définissez-vous une méthode statique dans une classe en Python?",
+                    "options": ["@staticmethod", "@static", "@classmethod"],
+                    "correct_answer": 0
+                }
+            ]
+        }
+        
+    ]
+}
