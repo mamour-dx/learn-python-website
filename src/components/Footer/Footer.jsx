@@ -1,10 +1,10 @@
 import React from 'react';
 import './Footer.css';
-import instagramLogo from '../../assets/icons/socials/instagram.png';
-import githubLogo from '../../assets/icons/socials/github.png';
-import linkedinLogo from '../../assets/icons/socials/linkedin.png';
-import emailIcon from '../../assets/icons/socials/email.png';
-import youtubeIcon from '../../assets/icons/socials/youtube.png';
+import instagramLogo from '/assets/icons/socials/instagram.png';
+import githubLogo from '/assets/icons/socials/github.png';
+import linkedinLogo from '/assets/icons/socials/linkedin.png';
+import emailIcon from '/assets/icons/socials/email.png';
+import youtubeIcon from '/assets/icons/socials/youtube.png';
 
 const Footer = () => {
     return (

@@ -18,7 +18,7 @@ const SupportMe = () => {
         <div className='Share zoom-in'>
           <h2 className='share'><span className='kofi-profile'>Partages</span> à un ami</h2>
           <h3>Envoie le site à un ami qui pourrait être intéressé par apprendre python ?</h3>
-          <img src="src/assets/share.svg" alt="share" className='share-img' />
+          <img src="assets/share.svg" alt="share-img" className='share-img' />
           <div className="share-url-container">
             <textarea
               value="https://python.mxr.codes"
@@ -31,7 +31,7 @@ const SupportMe = () => {
               </button>
             </CopyToClipboard>
           </div>
-          <img src="src/assets/socials.png" className='socials' />
+          <img src="/assets/socials.png" className='socials' />
         </div>
         <div className='donate zoom-in'>
           <h2 className='donation-cta'>Vous pouvez aussi faire un <a href='https://ko-fi.com/mxrcodes' className='kofi-profile' target='_blank' rel="noopener noreferrer">don</a></h2>

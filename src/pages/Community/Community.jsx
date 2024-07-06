@@ -26,16 +26,16 @@ const Community = () => {
       <div className="testimonial-slider glass zoom-in">
         <Slider {...settings}>
           <div className="slide">
-            <img src="src/assets/discordimg1.png" alt="Discord Conversation 1" />
+            <img src="/assets/discordimg1.png" alt="Discord Conversation 1" />
           </div>
           <div className="slide">
-            <img src="src/assets/discordimg2.png" alt="Discord Conversation 2" />
+            <img src="/assets/discordimg2.png" alt="Discord Conversation 2" />
           </div>
           <div className="slide">
-            <img src="src/assets/discordimg3.png" alt="Discord Conversation 3" />
+            <img src="/assets/discordimg3.png" alt="Discord Conversation 3" />
           </div>
           <div className="slide">
-            <img src="src/assets/discordimg4.png" alt="Discord Conversation 4" />
+            <img src="/assets/discordimg4.png" alt="Discord Conversation 4" />
           </div>
         </Slider>
       </div>

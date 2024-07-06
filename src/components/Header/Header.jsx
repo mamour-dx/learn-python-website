@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
-import logo from '../../assets/logo.png';
-import python from '../../assets/python.png';
-import homeIcon from '../../assets/icons/home.png';
-import quizIcon from '../../assets/icons/quiz.png';
-import communityIcon from '../../assets/icons/community.png';
-import supportIcon from '../../assets/icons/supportMe.png';
+import logo from '/assets/logo.png';
+import python from '/assets/python.png';
+import homeIcon from '/assets/icons/home.png';
+import quizIcon from '/assets/icons/quiz.png';
+import communityIcon from '/assets/icons/community.png';
+import supportIcon from '/assets/icons/supportMe.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

@@ -46,7 +46,7 @@ const Quiz = () => {
         )}
       </div>
       <div className="quiz-content zoom-in">
-        {!selectedTopic && !loading && <img src="src/assets/quiz-time.png" alt="Quiz Time" className="quiz-image" />}
+        {!selectedTopic && !loading && <img src="assets/quiz-time.png" alt="Quiz Time" className="quiz-image" />}
         {selectedTopic && <QuizCard topic={selectedTopic} />}
       </div>
     </div>
