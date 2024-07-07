@@ -157,6 +157,8 @@
   }
 
   .quiz-content {
+    height: 140px;
+    
     width: 100%;
     position: relative;
   }
@@ -171,7 +173,7 @@
     font-size: 20px;
   }
   .topics {
-    width: 60%;
+    width: 65%;
     align-self: center;
     margin-top: 40px;
     transform: scale(0.9);
@@ -188,5 +190,3 @@
     padding: 8px;
   }
 }
-
-
