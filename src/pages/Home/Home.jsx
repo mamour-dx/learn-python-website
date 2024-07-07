@@ -10,13 +10,13 @@ const Home = () => {
         <img src={HomeImg} alt="Python Quiz" />
         <p>Testes tes connaissances avec des quizs interactifs</p>
         <div className="cta-buttons">
-          <button className="cta-button"><a href="https://python.mxr.codes/quiz">Get Started</a></button>
-          <button className="cta-button"><a href="https://python.mxr.codes/community">Learn More</a></button>
+          <button className="cta-button"><a href="https://python.mxr.codes/quiz">Commencer maintenant!</a></button>
+          <button className="cta-button"><a href="https://python.mxr.codes/community">En savoir plus</a></button>
         </div>
       </section>
     
       <section className="section video-section">
-        <h2>Featured Video</h2>
+        <h2>Vidéo YouTube</h2>
         <iframe
           width="560"
           height="315"
@@ -29,18 +29,18 @@ const Home = () => {
       </section>
       <section className="section">
         <h2>Top Quizzes</h2>
-        <p>Check out our most popular quizzes to test and improve your Python skills.</p>
+        <p>Découvrez des quizs pour tester et améliorer vos compétences en Python.</p>
         <button className="cta-button"><a href="https://python.mxr.codes/quiz">Start Quiz</a></button>
       </section>
       <section className="section community-section">
-        <h2>Join the Community</h2>
-        <p>Connect with other Python enthusiasts, share knowledge, and get support.</p>
-        <button className="cta-button"><a href='https://discord.com/invite/ZSGzxgDrkP' target='_blank'>Join Now</a></button>
+        <h2>Rejoignez la communauté</h2>
+        <p>Connectez-vous avec d'autres "Python Enthusiast", partagez vos connaissances et obtenez du soutien.</p>
+        <button className="cta-button"><a href='https://discord.com/invite/ZSGzxgDrkP' target='_blank'>Rejoignez maintenant!</a></button>
       </section>
       <section className="section">
         <h2>Resources</h2>
-        <p>Explore our resources including articles, tutorials, and free downloadable content.</p>
-        <button className="cta-button"><a href="https://store.mxr.codes" target='_blank'>Cheat Sheets</a></button>
+        <p>Explorez nos ressources comprenant des tutoriels et des contenus téléchargeables gratuitement.</p>
+        <button className="cta-button"><a href="https://store.mxr.codes" target='_blank'>Voir ressources</a></button>
       </section>
     </div>
   );
