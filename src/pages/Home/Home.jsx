@@ -10,7 +10,7 @@ const Home = () => {
         <img src={HomeImg} alt="Python Quiz" />
         <p>Testes tes connaissances avec des quizs interactifs</p>
         <div className="cta-buttons">
-          <button className="cta-button"><a href="https://python.mxr.codes/quiz">Commencer maintenant!</a></button>
+          <button className="cta-button"><a href="https://python.mxr.codes/quiz">Commencer!</a></button>
           <button className="cta-button"><a href="https://python.mxr.codes/community">En savoir plus</a></button>
         </div>
       </section>

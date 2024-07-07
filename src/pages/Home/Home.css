@@ -11,7 +11,10 @@ body {
 .python-text {
   color:#ffd700;  
 }
-
+.home p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .home {
   padding: 2em;
   text-align: center;

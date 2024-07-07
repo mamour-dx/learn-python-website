@@ -137,7 +137,6 @@
   animation: zoomIn 0.5s ease-out;
 }
 
-/* src/components/mediaqueries.css */
 @media (max-width: 768px) {
   .quiz-container {
     flex-direction: column;
@@ -157,8 +156,6 @@
   }
 
   .quiz-content {
-    height: 140px;
-    
     width: 100%;
     position: relative;
   }
