@@ -62,6 +62,9 @@
   .cta-section h1 {
     font-size: 28px;
   }
+  .community-container {
+    height: 80vh;
+  }
 
   .cta-section p {
     font-size: 16px;
