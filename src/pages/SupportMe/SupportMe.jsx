@@ -8,7 +8,7 @@ const SupportMe = () => {
 
   const handleCopy = () => {
     setCopied(true);
-    setTimeout(() => setCopied(false), 3000); // Reset copied state after 3 seconds
+    setTimeout(() => setCopied(false), 3000); 
   };
 
   return (
