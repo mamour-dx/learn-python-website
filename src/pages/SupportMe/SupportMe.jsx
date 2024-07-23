@@ -45,7 +45,7 @@ const SupportMe = () => {
           <h2 className='donation-info'>Vos contributions sont directement investies dans la création de meilleurs contenus et l'amélioration des ressources pour la communauté. </h2>
         </div>
       </div>
-      <p className='avis'>Pour toute suggestion ou idée d'amélioration, écris-moi sur <a href="mailto:contact@mxr.codes">contact@mxr.codes</a>📩</p>
+      <p className='avis'>Pour toute suggestion ou idée d'amélioration, écris-moi sur <a href="mailto:contact@mxr.codes">me@mxr.codes</a>📩</p>
     </div>
   );
 };
